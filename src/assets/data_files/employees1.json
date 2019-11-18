@@ -1,0 +1,74 @@
+[
+  {
+    "empid": 1,
+    "name": "empone",
+    "email": "empone@mycompany.com",
+    "dob": "1994-11-05",
+    "age": 24,
+    "image": "/assets/images/empone.png"
+  },
+  {
+    "empid": 2,
+    "name": "emptwo",
+    "email": "emptwo@mycompany.com",
+    "dob": "1987-08-17",
+    "age": 32,
+    "image": "/assets/images/emptwo.png"
+  },
+  {
+    "empid": 3,
+    "name": "empthree",
+    "email": "empthree@mycompany.com",
+    "dob": "1992-08-26",
+    "age": 27,
+    "image": "/assets/images/empthree.png"
+  },
+  {
+    "empid": 4,
+    "name": "emptwo",
+    "email": "emptwo@mycompany.com",
+    "dob": "1987-08-17",
+    "age": 32,
+    "image": "/assets/images/emptwo.png"
+  },
+  {
+    "empid": 5,
+    "name": "empthree",
+    "email": "empthree@mycompany.com",
+    "dob": "1992-08-26",
+    "age": 27,
+    "image": "/assets/images/empthree.png"
+  },
+  {
+    "empid": 6,
+    "name": "emptwo",
+    "email": "emptwo@mycompany.com",
+    "dob": "1987-08-17",
+    "age": 32,
+    "image": "/assets/images/emptwo.png"
+  },
+  {
+    "empid": 7,
+    "name": "empthree",
+    "email": "empthree@mycompany.com",
+    "dob": "1992-08-26",
+    "age": 27,
+    "image": "/assets/images/empthree.png"
+  },
+  {
+    "empid": 8,
+    "name": "emptwo",
+    "email": "emptwo@mycompany.com",
+    "dob": "1987-08-17",
+    "age": 32,
+    "image": "/assets/images/emptwo.png"
+  },
+  {
+    "empid": 9,
+    "name": "empthree",
+    "email": "empthree@mycompany.com",
+    "dob": "1992-08-26",
+    "age": 27,
+    "image": "/assets/images/empthree.png"
+  }
+]

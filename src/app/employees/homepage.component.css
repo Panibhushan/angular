@@ -1,0 +1,14 @@
+.carousel-inner img {
+  position: relative;
+  width: 1400px;
+  height: 620px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.carousel-caption {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}

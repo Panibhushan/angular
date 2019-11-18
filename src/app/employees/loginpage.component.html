@@ -1,0 +1,117 @@
+<br />
+<style>
+  .customform {
+    width: 30%;
+    padding: 30px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    border-color: silver;
+  }
+
+  .customform input {
+    font-size: 0.9em;
+    border-color: silver;
+  }
+</style>
+
+<div class="container-fluid ">
+  <div class="container  customform">
+    <h3>LOGIN</h3>
+    <br />
+    <form
+      #loginForm="ngForm"
+      (ngSubmit)="checkLogin()"
+      [class.was-validated]="loginForm.touched && loginForm.invalid"
+    >
+      <p class="h6 text-danger" *ngIf="isWrongCredentials">
+        Invalid Credentials !! please try again
+      </p>
+      <div class="form-group">
+        <input
+          type="text"
+          id="username"
+          class="form-control form-control-lg"
+          name="username"
+          placeholder="Username"
+          [(ngModel)]="username"
+          (ngModelChange)="isWrongCredentials=false"
+          #usernameControl
+          required
+        />
+        <div class="invalid-feedback">
+          Please enter username.
+        </div>
+      </div>
+
+      <div
+        class="form-group input-group"
+        [class.has-danger]="passwordControl.touched && passwordControl.invalid"
+        [hidden]="showeye"
+      >
+        <input
+          type="password"
+          id="password"
+          class="form-control form-control-lg"
+          name="password"
+          placeholder="Password"
+          [(ngModel)]="password"
+          (ngModelChange)="isWrongCredentials=false"
+          #passwordControl
+          required
+        />
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <a (click)="showOrHidePassword()">
+              <i class="fas fa-eye"></i>
+            </a>
+          </div>
+        </div>
+        <div class="invalid-feedback">
+          Please enter password
+        </div>
+      </div>
+      <div
+        class="form-group input-group"
+        [class.has-danger]="passwordControl.touched && passwordControl.invalid"
+        [hidden]="hideeye"
+      >
+        <input
+          type="text"
+          id="password"
+          class="form-control form-control-lg"
+          name="password"
+          placeholder="Password"
+          [(ngModel)]="password"
+          (ngModelChange)="isWrongCredentials=false"
+          #passwordControl
+          required
+        />
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <a (click)="showOrHidePassword()">
+              <i class="fas fa-eye-slash"></i>
+            </a>
+          </div>
+        </div>
+        <div class="invalid-feedback">
+          Please enter password
+        </div>
+      </div>
+      <br />
+
+      <button
+        class="btn btn-success"
+        disabled
+        *ngIf="loginForm.invalid"
+        title="button will be enabled when all the field are filled"
+      >
+        LOGIN
+      </button>
+      <button class="btn btn-success" *ngIf="loginForm.valid">
+        LOGIN
+      </button>
+    </form>
+    <br />
+  </div>
+</div>

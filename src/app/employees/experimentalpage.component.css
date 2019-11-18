@@ -1,0 +1,74 @@
+.box {
+  width: 180px;
+  height: 250px;
+  float: left;
+  margin-right: 6px;
+  justify-content: center;
+  display: flex;
+  transition: 0.8s;
+}
+.box:hover {
+  transform: scale(1.2);
+}
+
+label[for="test"] {
+  display: block;
+  -webkit-perspective: 800px;
+  perspective: 800px;
+}
+
+.reversible {
+  position: relative;
+  width: 180px;
+  height: 250px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: transform 1s ease;
+  transition: all 1s;
+}
+
+input[type="checkbox"]:checked + label .reversible {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.reversible .card {
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.tile-front {
+  z-index: 2;
+}
+
+.tile-back {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.card-body {
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+}
+.card-footer {
+  font-size: 2rem;
+}
+
+.card {
+  width: 180px;
+  height: 250px;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}

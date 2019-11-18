@@ -1,0 +1,173 @@
+<style>
+  .imgclass {
+    width: 200px;
+    height: 200px;
+  }
+
+  .fa-chevron-left,
+  .fa-chevron-right {
+    position: relative;
+    font-size: 50px;
+  }
+
+  .cursordisabled {
+    cursor: not-allowed;
+    color: red;
+    font-size: 10px;
+  }
+
+  .imghover:hover img {
+    transform: scale(1.8);
+    justify-content: center;
+  }
+</style>
+
+<!-- POPUP div STARTS -->
+<div class="container">
+  <!-- The Modal -->
+  <div class="modal " id="myModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header  bg-primary text-light">
+          <h4 class="modal-title">
+            EMPLOYEE : {{selectedEmployee.name }}
+          </h4>
+          <button type="button" class="close" data-dismiss="modal">
+            &times;
+          </button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-1">
+                <button
+                  class="btn btn-light"
+                  (click)="goPrevious()"
+                  [disabled]="disablePrevious"
+                  [class.cursordisabled]="disablePrevious"
+                >
+                  <i class="fas fa-chevron-left"></i>
+                </button>
+              </div>
+              <div class="col-md-5 imghover">
+                <img
+                  [src]="selectedEmployee.image"
+                  width="200px"
+                  height="200px"
+                />
+              </div>
+              <div class="col-md-5">
+                <table class="table table-bordered table-striped">
+                  <tr>
+                    <td>EMP ID</td>
+                    <td>{{selectedEmployee.empid }}</td>
+                  </tr>
+                  <tr>
+                    <td>EMAIL</td>
+                    <td>{{selectedEmployee.email | lowercase }}</td>
+                  </tr>
+                  <tr>
+                    <td>DOB</td>
+                    <td>{{selectedEmployee.dob }}</td>
+                  </tr>
+                  <tr>
+                    <td>AGE</td>
+                    <td>{{selectedEmployee.age }}</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="col-md-1">
+                <button
+                  class="btn btn-light"
+                  (click)="goNext()"
+                  [disabled]="disableNext"
+                  [class.cursordisabled]="disableNext"
+                >
+                  <i class="fas fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">
+            << Hide Details
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- POPUP DIV ENDS -->
+
+<div class="container">
+  Search here : <input type="text" [(ngModel)]="searchBox" />
+</div>
+
+<div class="row card-group">
+  <div
+    *ngFor="let emp of employees | searchFilter : searchBox  "
+    class="col-4 "
+  >
+    <div class="card">
+      <div class="card-body text-center">
+        <h3 class="card-title bg-primary text-white">{{ emp.name}}</h3>
+        <a [attr.href]="emp.image">
+          <img class="imgclass" [src]="emp.image" alt="EMP IMAGE" />
+        </a>
+        <p class="card-text">EMP ID : {{emp.empid }}</p>
+        <p class="card-text">EMAIL : {{emp.email | lowercase }}</p>
+        <div *ngIf="( showMoreDetails && emp.empid===selectedId)">
+          <p class="card-text">DOB : {{emp.dob }}</p>
+          <p class="card-text">AGE : {{emp.age }}</p>
+        </div>
+        <button
+          data-toggle="modal"
+          data-target="#myModal"
+          type="button"
+          class="btn btn-primary"
+        >
+          Show More Details >>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+
+  <div class="row card-group">
+  <div *ngFor="let emp of employees let i='index'  " class="col-4 ">
+    <div class="card">
+      <div class="card-body text-center">
+        <h3 class="card-title bg-primary text-white">{{ emp.name}}</h3>
+        <a [attr.href]="emp.image">
+          <img class="imgclass" [src]="emp.image" alt="EMP IMAGE" />
+        </a>
+        <p class="card-text">EMP ID : {{emp.empid }}</p>
+        <p class="card-text">EMAIL : {{emp.email | lowercase }}</p>
+        <div *ngIf="( showMoreDetails && emp.empid===selectedId)">
+          <p class="card-text">DOB : {{emp.dob }}</p>
+          <p class="card-text">AGE : {{emp.age }}</p>
+        </div>
+        <button
+          data-toggle="modal"
+          data-target="#myModal"
+          type="button"
+          class="btn btn-primary"
+          (click)="viewSelectedEmployee(emp,i)"
+        >
+          Show More Details >>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+<br /><br /><br />

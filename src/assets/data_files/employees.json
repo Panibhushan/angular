@@ -1,0 +1,74 @@
+[
+  {
+    "empid": 1,
+    "name": "EMP1",
+    "email": "EMP1@mycompany.com",
+    "dob": "1994-11-05",
+    "age": 24,
+    "image": "/assets/images/EMP1.png"
+  },
+  {
+    "empid": 2,
+    "name": "EMP2",
+    "email": "EMP2@mycompany.com",
+    "dob": "1987-08-17",
+    "age": 32,
+    "image": "/assets/images/EMP2.png"
+  },
+  {
+    "empid": 3,
+    "name": "EMP3",
+    "email": "EMP3@mycompany.com",
+    "dob": "1992-08-26",
+    "age": 27,
+    "image": "/assets/images/EMP3.png"
+  },
+  {
+    "empid": 4,
+    "name": "EMP2",
+    "email": "EMP2@mycompany.com",
+    "dob": "1987-08-17",
+    "age": 32,
+    "image": "/assets/images/EMP2.png"
+  },
+  {
+    "empid": 5,
+    "name": "EMP3",
+    "email": "EMP3@mycompany.com",
+    "dob": "1992-08-26",
+    "age": 27,
+    "image": "/assets/images/EMP3.png"
+  },
+  {
+    "empid": 6,
+    "name": "EMP2",
+    "email": "EMP2@mycompany.com",
+    "dob": "1987-08-17",
+    "age": 32,
+    "image": "/assets/images/EMP2.png"
+  },
+  {
+    "empid": 7,
+    "name": "EMP3",
+    "email": "EMP3@mycompany.com",
+    "dob": "1992-08-26",
+    "age": 27,
+    "image": "/assets/images/EMP3.png"
+  },
+  {
+    "empid": 8,
+    "name": "EMP2",
+    "email": "EMP2@mycompany.com",
+    "dob": "1987-08-17",
+    "age": 32,
+    "image": "/assets/images/EMP2.png"
+  },
+  {
+    "empid": 9,
+    "name": "EMP3",
+    "email": "EMP3@mycompany.com",
+    "dob": "1992-08-26",
+    "age": 27,
+    "image": "/assets/images/EMP3.png"
+  }
+]

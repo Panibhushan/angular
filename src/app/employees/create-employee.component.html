@@ -1,0 +1,51 @@
+<br /><br />
+
+<div class="container">
+  <form
+    #createEmployeeForm="ngForm"
+    (ngSubmit)="createEmployee(createEmployeeForm.value)"
+    class="was-validated"
+  >
+    <div class="form-group">
+      <label for="name">NAME:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        placeholder="Enter Employee Name"
+        name="name"
+        ngModel
+        required
+      />
+      <div class="invalid-feedback">Name field is mandatory.</div>
+    </div>
+    <div class="form-group">
+      <label for="pwd">EMAIL:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="email"
+        placeholder="Enter EMAIL"
+        name="email"
+        ngModel
+        required
+      />
+      <div class="invalid-feedback">Email field is mandatory.</div>
+    </div>
+
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="createEmployeeForm.invalid"
+    >
+      Submit
+    </button>
+  </form>
+
+  <div>
+    <p>createEmployeeForm : {{ createEmployeeForm.value | json }}</p>
+    <p>createEmployeeForm valid : {{ createEmployeeForm.valid | json }}</p>
+    <p>createEmployeeForm touched : {{ createEmployeeForm.touched | json }}</p>
+  </div>
+</div>
+-
